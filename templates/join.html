@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type"; content = text/html; charset="UTF-8">
+<meta name = "viewport" content = "width=device-width",initial-scale="1">
+<link rel="stylesheet" href="/static/css/bootstrap.css">
+<title>REGALA_JOIN</title>
+</head>
+<body style="background-color:#585858">
+	<nav>
+		<div class = "navbar-header">
+			<a style = color:white class="navbar-brand" href="index.jsp">PROJECT REGALA</a>
+		</div>
+		<div style="background-color:#6E6E6E" class= "collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class = "nav navbar-nav">
+				<li><a href="/">메인</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li  class="dropdown">
+					<a href ="#" class= "dropdown-toggle"
+					data-toggle="dropdown" role="button"
+					aria-haspopup="true" style = color:white
+					aria-expanded="true">접속하기<span class="caret"></span></a>
+				<ul class="dropdown-menu">
+						<li><a href="/login">로그인</a></li>
+						<li> <a href="/join">회원가입</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div class="container" style="padding-top: 60px">
+		<div class="col-lg-4"></div>
+		<div class="col-lg-4">
+			<div style="background-color:#6E6E6E" class="jumbotron" style="padding-top: 20px;">
+				<form method="post" action = "joinAction.jsp">
+					<h3 style="text-align: center; color:white">회원가입</h3>
+					<div class = "form-group">
+						<input type="text" class="form-control" placeholder="아이디" name="userID" maxlength="20">
+					</div>
+					<div class = "form-group">
+						<input type="password" class="form-control" placeholder="비밀번호" name="userPassword" maxlength="20">
+					</div>
+					<div class = "form-group">
+						<input type="text" class="form-control" placeholder="이름" name="userName" maxlength="20">
+					</div>
+					<div class = "form-group" style= "text-align: center;">
+						<div class = "btn-group" data-toggle="buttons">
+							<label class = "btn btn-primary active">
+								<input type="radio" name="userGender" autocomplete="off" value="남" checked>남</input>
+							</label>
+							<label class = "btn btn-primary">
+								<input type="radio" name="userGender" autocomplete="off" value="여" checked>여</input>
+							</label>
+						</div>
+						</div>
+					<div class = "form-group">
+						<input type="email" class="form-control" placeholder="이메일" name="userEmail" maxlength="20">
+					</div>
+						<input type="submit" class ="btn btn-primary form-control" value="회원가입"></input>
+					</div>
+					
+				</form>
+			</div>
+		</div>
+	</div>
+	<script src = "https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src = "/static/js/bootstrap.js"></script>
+</body>
+</html>

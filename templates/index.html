@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+
+    <title>REGALA PROJECT</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    <!-- Favicons -->
+    <link href="/static/assets/img/favicon.png" rel="icon" />
+    <link href="/static/assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="/static/assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="/static/assets/vendor/icofont/icofont.min.css" rel="stylesheet" />
+    <link href="/static/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+    <link href="/static/assets/vendor/venobox/venobox.css" rel="stylesheet" />
+    <link
+      href="/static/assets/vendor/owl.carousel/assets/owl.carousel.min.css"
+      rel="stylesheet"
+    />
+    <link href="/static/assets/vendor/aos/aos.css" rel="stylesheet" />
+
+    <!-- Template Main CSS File -->
+    <link href="/static/assets/css/style.css" rel="stylesheet" />
+    <link href="/static/css/mymain.css" rel="stylesheet">
+
+    <!-- =======================================================
+  * Template Name: iPortfolio - v2.0.1
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+      <!--chart.js -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.2/mqttws31.min.js" type="text/javascript"></script>
+      <script src="./static/mqttio5.js" type="text/javascript"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" type="text/javascript"></script>
+      <script src="./static/myChart.js" type="text/javascript"></script>
+
+
+      <script>
+        window.onload = function() {
+          startConnect();
+          subscribe('info');
+          
+        }
+      </script>
+
+
+  </head>
+
+  <body>
+    <!-- ======= Mobile nav toggle button ======= -->
+    <button type="button" class="mobile-nav-toggle d-xl-none">
+      <i class="icofont-navigation-menu"></i>
+    </button>
+
+    <!-- ======= Header ======= -->
+    <header id="header">
+      <div class="d-flex flex-column">
+        <div class="profile">
+          <img
+            src="/static/assets/img/soccer.jpg"
+            alt=""
+            class="img-fluid rounded-circle"
+          />
+          <h1 class="text-light"><a href="/index">HELLO, REGALA</a></h1>
+          <div class="text-center">
+            <a href="/login">
+              <button type="button" class="btn btn-primary">로그인</button></a
+            >
+            <a href="/join">
+              <button type="button" class="btn btn-primary">회원가입</button></a
+            >
+          </div>
+        </div>
+
+        <nav class="nav-menu">
+          <ul>
+            <li>
+              <a href="#about"
+                ><i class="bx bx-user"></i> <span>WHAT IS REGALA</span></a
+              >
+            </li>
+            <li>
+              <a href="#portfolio"
+                ><i class="bx bx-book-content"></i>STAR FEED</a
+              >
+            </li>
+            <li>
+              <a href="#portfolio2"
+                ><i class="bx bx-book-content"></i>FRIENDS FEED</a
+              >
+            </li>
+            <li>
+              <a href="#monitoring"
+                ><i class="bx bx-book-content"></i>MONITORING</a
+              >
+            </li>
+            <li>
+              <a href="#mypage"
+                ><i class="bx bx-book-content"></i>MY PAGE</a
+              >
+            </li>
+          
+
+          </ul>
+        </nav>
+        <!-- .nav-menu -->
+        <button type="button" class="mobile-nav-toggle d-xl-none">
+          <i class="icofont-navigation-menu"></i>
+        </button>
+      </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- ======= Hero Section ======= -->
+    <section
+      id="hero"
+      class="d-flex flex-column justify-content-center align-items-center"
+    >
+      <div class="hero-container" data-aos="fade-in">
+        <h1>REGALA</h1>
+        <p>
+          Welcome 
+          <span
+            class="typed"
+            data-typed-items="Soccer Lovers : ) "
+          ></span>
+        </p>
+      </div>
+    </section>
+    <!-- End Hero -->
+
+    <main id="main">
+      <!-- ======= About Section ======= -->
+      <section id="about" class="about">
+        <div class="container">
+          <div class="section-title">
+            <h2>WHAT IS REGALA?</h2>
+            <p></p>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-4" data-aos="fade-right">
+              <img src="/static/assets/img/profile-img.jpeg" class="img-fluid" alt="" />
+            </div>
+            <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+              <h3>Welcome to REGALA</h3>
+              <p class="font-italic">
+                  We provide a service for soccer team matching.
+              </p>    
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End About Section -->
+
+      
+
+      
+
+      <!-- ======= Portfolio Section ======= -->
+      <section id="portfolio" class="portfolio section-bg">
+        <div class="container">
+          <div class="section-title">
+            <h2>Star Feed</h2>
+            <p>You can see other star sports team video</p>
+          </div>
+
+          <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+              <div>
+                <video width="100%" height="80%" preload="none" autoplay="autoplay" controls muted>
+                    <source  src="/static/video/project3.mp4" type="video/mp4">
+                </source>
+                </video>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+              <div>
+                <video width="100%" height="80%" preload="none" autoplay="autoplay" controls muted>
+                    <source  src="/static/video/project3.mp4" type="video/mp4">
+                </source>
+                </video>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                <div>
+                  <video width="100%" height="80%" preload="none" autoplay="autoplay" controls muted>
+                      <source  src="/static/video/project3.mp4" type="video/mp4">
+                  </source>
+                  </video>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Portfolio Section -->
+
+      <!-- ======= Portfolio2 Section ======= -->
+      <section id="portfolio2" class="portfolio section-bg">
+        <div class="container">
+          <div class="section-title">
+            <h2>Friends Feed</h2>
+            <p>you can see your freinds sports video</p>
+          </div>
+          <div
+            class="row portfolio-container"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div>
+              <video width="100%" height="80%" preload="none" autoplay="autoplay" controls muted>
+                  <source  src="/static/video/project3.mp4" type="video/mp4">
+              </source>
+              </video>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div>
+              <video width="100%" height="80%" preload="none" autoplay="autoplay" controls muted>
+                  <source  src="/static/video/project3.mp4" type="video/mp4">
+              </source>
+              </video>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+              <div>
+                <video width="100%" height="80%" preload="none" autoplay="autoplay" controls muted>
+                    <source  src="/static/video/project3.mp4" type="video/mp4">
+                </source>
+                </video>
+              </div>
+          </div>
+          </div>
+          </div>
+      </section>
+      <!-- End Portfolio Section -->
+
+
+      
+    <!-- ======= Portfolio Section ======= -->
+    <section id="monitoring" class="portfolio section-bg">
+      <div class="container">
+        <div class="section-title">
+          <h2>Monitoring Page</h2>
+          <p>You can see camera Monitoring System</p>
+        </div>
+        <!--
+        <form id="connection-form">
+          <input type="button" onclick="startConnect()" value="Connect">
+          <input type="button" onclick="startDisconnect()" value="Disconnect">
+        </form>
+      
+        <form id="subscribe-form">
+          <input type="button" onclick="subscribe('ultrasonic')" value="측정시작">
+          <input type="button" onclick="unsubscribe('ultrasonic')" value="측정중단">
+        </form>
+      -->
+        <canvas id="canvas" width="600" height="200"></canvas>
+        <canvas id="canvas2" width="600" height="200"></canvas>
+        <canvas id="canvas3" width="600" height="200"></canvas>
+
+        <div id="messages" style="display: none;"></div>
+      
+         
+      </div>
+    </section>
+    <!-- End Portfolio Section -->
+
+      <div>
+
+        <section id="mypage" class="portfolio section-bg">
+          <div class="container">
+          <div class="section-title">
+            <h2>My Page</h2>
+            <p>you can see your personal list</p>
+          </div>
+         </div>
+          <table id="table" align="center">
+            <tbody>
+              <tr>
+                  <td class="rignt">
+                  <div class="container">
+                  <!--구매한 영상 보관함-->
+                      <img src="/static/assets/img/mypages/PURCHASED VIDEO.png" alt="Purchased Video" class="image" style="width:100%">
+                      <a href="video.html"><div class="overlay">
+                          <div class="text">구매한 영상</div>
+                      </div></a>
+                  </div>
+                  </td>
+                  <td>
+                  <div class="container">
+                  <!--나의 팀 보기-->
+                      <img src="/static/assets/img/mypages/MYTEAM.png" alt="Purchased Video" class="image" style="width:100%">
+                      <a href="team.html"><div class="overlay">
+                          <div class="text">나의 팀</div>
+                      </div></a>
+                  </div>
+                  </td>
+              </tr>
+              <tr>
+                  <td class="rignt">
+                  <div class="container">
+                  <!--결제-->
+                      <img src="/static/assets/img/mypages/PAYMENT.png" alt="Purchased Video" class="image" style="width:100%">
+                      <a href="payment.html"><div class="overlay">
+                          <div class="text">결제</div>
+                      </div></a>
+                  </div>
+                  </td>
+                  <td>
+                  <div class="container">
+                  <!--나의 구독-->
+                      <img src="/static/assets/img/mypages/MYSUBSCRIPTION.png" alt="Purchased Video" class="image" style="width:100%">
+                      <a href="subscription.html"><div class="overlay">
+                          <div class="text">나의 구독</div>
+                      </div></a>
+                  </div>
+                  </td>
+              </tr>
+            </tbody> 
+    </div>
+    </main>
+    <!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+      <div class="container">
+        <div class="copyright">
+          &copy; Copyright <strong><span>REGALA</span></strong>
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/ -->
+          Designed by <a href="https://bootstrapmade.com/">REGALA</a>
+        </div>
+      </div>
+    </footer>
+    <!-- End  Footer -->
+
+    <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="/static/assets/vendor/jquery/jquery.min.js"></script>
+    <script src="/static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="/static/assets/vendor/php-email-form/validate.js"></script>
+    <script src="/static/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+    <script src="/static/assets/vendor/counterup/counterup.min.js"></script>
+    <script src="/static/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="/static/assets/vendor/venobox/venobox.min.js"></script>
+    <script src="/static/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+    <script src="/static/assets/vendor/typed.js/typed.min.js"></script>
+    <script src="/static/assets/vendor/aos/aos.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="/static/assets/js/main.js"></script>
+  </body>
+</html>
